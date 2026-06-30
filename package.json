@@ -1,0 +1,72 @@
+{
+  "name": "ol-image-map",
+  "version": "0.1.0",
+  "private": false,
+  "description": "OpenLayers image map component for flat floorplan annotations with Vue, React and vanilla adapters.",
+  "type": "module",
+  "main": "./dist/ol-image-map.cjs",
+  "module": "./dist/ol-image-map.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/ol-image-map.css",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ol-image-map.js",
+      "require": "./dist/ol-image-map.cjs"
+    },
+    "./style.css": "./dist/ol-image-map.css"
+  },
+  "sideEffects": [
+    "*.css",
+    "**/*.css",
+    "*.vue"
+  ],
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/clean-dist.mjs && npm run build:types && npm run build:lib",
+    "build:demo": "vue-tsc --noEmit && vite build",
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "build:types": "vue-tsc -p tsconfig.build.json",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run --config vitest.config.ts",
+    "test:ui": "playwright test"
+  },
+  "peerDependencies": {
+    "ol": "^10.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vue": "^3.5.13"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "ol": "^10.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  }
+}

@@ -1,0 +1,196 @@
+@import 'ol/ol.css';
+
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #eef2f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  background: #eef2f5;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid #d7dee8;
+  background: #ffffff;
+}
+
+.toolbar__group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-right: 10px;
+  border-right: 1px solid #d7dee8;
+}
+
+.toolbar__group:last-child {
+  border-right: 0;
+}
+
+.tool-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #243041;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.tool-button--file {
+  line-height: 1;
+}
+
+.tool-button:hover {
+  border-color: #0f766e;
+}
+
+.tool-button--active {
+  color: #ffffff;
+  border-color: #0f766e;
+  background: #0f766e;
+}
+
+.tool-button:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+  background: #f8fafc;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  min-height: 0;
+}
+
+.map-stage {
+  min-width: 0;
+  min-height: 0;
+  padding: 14px;
+}
+
+.ol-image-map {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 14px;
+  border-left: 1px solid #d7dee8;
+  background: #f8fafc;
+}
+
+.panel-section {
+  display: grid;
+  gap: 10px;
+}
+
+.panel-section h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  color: #5b6779;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.annotation-list {
+  display: grid;
+  gap: 6px;
+  overflow: auto;
+}
+
+.annotation-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d7dee8;
+  border-radius: 6px;
+  text-align: left;
+  color: #243041;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.annotation-item--active {
+  border-color: #0f766e;
+  box-shadow: inset 3px 0 0 #0f766e;
+}
+
+.annotation-type {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.empty-state {
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 860px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    border-top: 1px solid #d7dee8;
+    border-left: 0;
+  }
+}
