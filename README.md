@@ -4,7 +4,7 @@
 
 [在线 Demo](https://glzcc.github.io/ol-image-map/)
 
-![OL Image Map 示例界面](docs/assets/ol-image-map-demo.png)
+![OL Image Map 示例界面](https://raw.githubusercontent.com/glzcc/ol-image-map/main/docs/assets/ol-image-map-demo.png)
 
 ## 特性
 

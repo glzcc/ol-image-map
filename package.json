@@ -1,6 +1,6 @@
 {
   "name": "@gl-zcc/ol-image-map",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "OpenLayers image map component for flat floorplan annotations with Vue, React and vanilla adapters.",
   "type": "module",

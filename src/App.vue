@@ -87,7 +87,7 @@ import { parseImageMapConfig, serializeImageMapConfig } from './lib/annotationJs
 import type { ImageMapAnnotation, ImageMapConfig, ImageMapMode } from './types/image-map';
 
 const config = reactive<ImageMapConfig>({
-  imageUrl: '/floor-plan-demo.svg',
+  imageUrl: `${import.meta.env.BASE_URL}floor-plan-demo.svg`,
   imageWidth: 451,
   imageHeight: 451,
   annotations: []
