@@ -2,6 +2,8 @@
 
 基于 OpenLayers 的平面图片地图组件。适合在户型图、楼层图、园区图、工厂平面图等图片底图上做区域标注和位置标注。
 
+![OL Image Map 示例界面](docs/assets/ol-image-map-demo.png)
+
 ## 特性
 
 - 使用普通图片作为底图。
@@ -55,18 +57,24 @@ npm pack --dry-run
 首次发布：
 
 ```bash
-npm login
-npm publish --access public
+npm login --registry=https://registry.npmjs.org/
+npm publish --access public --registry=https://registry.npmjs.org/
 ```
 
 后续发布前需要提升版本号：
 
 ```bash
 npm version patch
-npm publish --access public
+npm publish --access public --registry=https://registry.npmjs.org/
 ```
 
 当前包配置会把 `dist`、`README.md` 和 `LICENSE` 发布出去。`dist` 由 `npm run build` 生成，包含 ESM、CommonJS、类型声明和样式文件。
+
+如果本机 registry 配成了国内镜像，例如 `https://registry.npmmirror.com/`，发布前可以临时切到 npm 官方源：
+
+```bash
+npm config set registry https://registry.npmjs.org/
+```
 
 ## 核心用法
 
