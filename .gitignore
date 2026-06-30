@@ -4,5 +4,6 @@ dist-demo/
 test-results/
 playwright-report/
 *.tgz
+.npmrc
 .DS_Store
 Thumbs.db
