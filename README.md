@@ -35,13 +35,13 @@ npm test
 安装：
 
 ```bash
-npm install ol-image-map ol
+npm install @gl-zcc/ol-image-map ol
 ```
 
 Vue 项目需要同时安装 Vue，React 项目需要同时安装 React 和 ReactDOM。样式可以直接导入：
 
 ```ts
-import 'ol-image-map/style.css';
+import '@gl-zcc/ol-image-map/style.css';
 ```
 
 ## 发布到 npm
@@ -79,7 +79,7 @@ npm config set registry https://registry.npmjs.org/
 ## 核心用法
 
 ```ts
-import { OlImageMapCore } from 'ol-image-map';
+import { OlImageMapCore } from '@gl-zcc/ol-image-map';
 
 const imageMap = new OlImageMapCore(document.querySelector('#map')!, {
   imageUrl: '/floor-plan.png',
@@ -125,7 +125,7 @@ imageMap.on('change', annotations => {
 ## 原生 JavaScript 用法
 
 ```ts
-import { createOlImageMap } from 'ol-image-map';
+import { createOlImageMap } from '@gl-zcc/ol-image-map';
 
 const imageMap = createOlImageMap('#map', {
   imageUrl: '/floor-plan.png',
