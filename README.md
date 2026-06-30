@@ -2,6 +2,8 @@
 
 基于 OpenLayers 的平面图片地图组件。适合在户型图、楼层图、园区图、工厂平面图等图片底图上做区域标注和位置标注。
 
+[在线 Demo](https://glzcc.github.io/ol-image-map/)
+
 ![OL Image Map 示例界面](docs/assets/ol-image-map-demo.png)
 
 ## 特性
@@ -22,6 +24,16 @@ npm run dev
 ```
 
 打开本地开发地址后，可以直接在示例户型图上绘制点位和区域。
+
+## Demo 部署
+
+本仓库已配置 GitHub Pages 自动部署。推送到 `main` 后，GitHub Actions 会构建示例页面并发布到：
+
+```text
+https://glzcc.github.io/ol-image-map/
+```
+
+如果首次使用，需要在 GitHub 仓库的 `Settings -> Pages` 中把 `Source` 设置为 `GitHub Actions`。
 
 ## 构建和测试
 
